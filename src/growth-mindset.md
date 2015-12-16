@@ -1,3 +1,7 @@
+---
+title: Growth mindset
+---
+
 Mindset by Carol Dweck – Summary
 http://alexvermeer.com/why-your-mindset-important/
 
