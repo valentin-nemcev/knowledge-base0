@@ -4,6 +4,8 @@ const layouts = require('metalsmith-layouts');
 const collections = require('metalsmith-collections');
 const permalinks = require('metalsmith-permalinks');
 
+const browserSync = require('metalsmith-browser-sync');
+
 const Handlebars = require('handlebars');
 
 const inspect = require('util').inspect;
@@ -15,6 +17,10 @@ Handlebars.registerHelper('debug', function (context) {
 });
 
 Metalsmith(__dirname)
+  .use(browserSync({
+    server : "build",
+    files  : ["content/**/*"]
+  }))
   .use(collections({
     articles: {
       pattern: 'articles/*.md',
