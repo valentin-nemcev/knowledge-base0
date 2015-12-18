@@ -1,3 +1,7 @@
+---
+title: Elements of flow
+---
+
 Nine elements of flow
 
 Csikszentmihalyi identified nine elements of flow that he saw repeatedly in his

@@ -1,3 +1,7 @@
+---
+title: Git commit messages
+---
+
 How to Write a Git Commit Message
 
 The seven rules of a great git commit message
