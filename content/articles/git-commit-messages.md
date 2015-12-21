@@ -6,6 +6,7 @@ title: Git commit messages
 
 ### Format
 
+
 * Separate subject from body with a blank line
 * Limit the subject line to 50 characters
 * Capitalize the subject line
