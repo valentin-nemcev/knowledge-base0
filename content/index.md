@@ -11,3 +11,4 @@ permalink: false
 ## Todo
 
 * “Elements of style”, hourglass structure
+* [Growth mindset](articles/growth-mindset/)
