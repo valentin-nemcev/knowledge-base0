@@ -1,8 +1,7 @@
 <ul>
-  {{debug collections.articles}}
   {{#each collections.articles}}
     <li>
-      <a href="/{{this.paths.dir}}/{{this.paths.name}}/" class="portfolio-entry">
+      <a href="{{this.href}}" class="portfolio-entry">
         {{this.title}}
       </a>
     </li>
