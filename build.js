@@ -3,6 +3,9 @@ const markdown = require('metalsmith-markdown');
 const layouts = require('metalsmith-layouts');
 const collections = require('metalsmith-collections');
 const permalinks = require('metalsmith-permalinks');
+const metalsmithInPlace = require('metalsmith-in-place');
+var paths = require('metalsmith-paths')
+
 
 const Handlebars = require('handlebars');
 
@@ -15,19 +18,28 @@ Handlebars.registerHelper('debug', function (context) {
 });
 
 Metalsmith(__dirname)
+  .use(paths({
+    property: "paths"
+  }))
   .use(collections({
     articles: {
       pattern: 'articles/*.md',
       refer: false
     }
   }))
-  .use(markdown())
-  .use(permalinks({
-    pattern: ':collection/:title'
+  .use(metalsmithInPlace({
+    engine: 'handlebars',
+    partials: 'templates/partials',
   }))
+  .use(markdown())
   .use(layouts({
     engine: 'handlebars',
+    directory: 'templates',
+    partials: 'templates/partials',
     default: 'article.hbs'
+  }))
+  .use(permalinks({
+    pattern: './:collection/:title'
   }))
   .source('./content')
   .destination('./build')

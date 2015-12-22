@@ -1,5 +1,13 @@
 ---
 title: Knowledge base
-layout: index.hbs
 permalink: false
 ---
+
+## Articles
+
+{{> articles}}
+
+
+## Todo
+
+* “Elements of style”, hourglass structure
