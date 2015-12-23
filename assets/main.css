@@ -1,0 +1,30 @@
+html {
+  font: 100%/1.5 Arial, sans-serif;
+}
+
+body {
+  max-width: 60ex;
+  margin: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+ul > li {
+  text-indent: -1em;
+}
+ul > li:before {
+  content: "–";
+  text-indent: 0;
+  display: inline-block;
+  width: 1em;
+}
+

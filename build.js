@@ -9,6 +9,7 @@ const metalsmithInPlace = require('metalsmith-in-place');
 const paths = require('metalsmith-paths');
 const slug = require('slug');
 const each = require('metalsmith-each');
+const assets = require('metalsmith-assets');
 
 
 const Handlebars = require('handlebars');
@@ -52,13 +53,19 @@ Metalsmith(__dirname)
     engine: 'handlebars',
     directory: 'templates',
     partials: 'templates/partials',
-    default: 'article.hbs'
+    default: 'page.hbs'
   }))
   .use(
     each(function (file) {
       if (file.href) return './' + file.href + "index.html";
     }
   ))
+  .use(
+    assets({
+      source: './assets',
+      destination: './assets'
+    })
+  )
   .source('./content')
   .destination('./build')
   .build( (err) => {
