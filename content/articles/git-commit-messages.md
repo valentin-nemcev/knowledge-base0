@@ -1,5 +1,6 @@
 ---
 title: Git commit messages
+reviewDate: 2015-12-25 15:39
 ---
 
 ## Rules

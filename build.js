@@ -35,9 +35,16 @@ Handlebars.registerHelper('debug', function (context) {
   }
 }
 
+function addDates(file) {
+  file.modificationDate = file.stats.mtime.toISOString();
+  if (file.reviewDate != null)
+    file.reviewDate = new Date(file.reviewDate).toISOString();
+}
+
 Metalsmith(__dirname)
   .use(paths({property: 'paths'}))
   .use(each(generateHref))
+  .use(each(addDates))
   .use(collections({
     articles: {
       pattern: 'articles/*.md',

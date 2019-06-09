@@ -28,3 +28,7 @@ ul > li:before {
   width: 1em;
 }
 
+
+a, a:visited { color: #00e; }
+/* a:visited { color: inherit; } */
+a:hover { color: #06e; }

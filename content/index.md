@@ -12,3 +12,4 @@ permalink: false
 
 * “Elements of style”, hourglass structure
 * [Growth mindset](articles/growth-mindset/)
+* Non-designers design book

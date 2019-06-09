@@ -2,11 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8"/>
+    <script src="/assets/jquery.js"></script>
+    <script src="/assets/moment.min.js"></script>
+    <script src="/assets/main.js"></script>
     <link rel="stylesheet" href="/assets/normalize.css">
     <link rel="stylesheet" href="/assets/main.css">
     <title>{{title}}</title>
   </head>
   <body>
+    <div>
+      Modification:
+      <span class="modification date" data-date="{{modificationDate}}">
+        {{modificationDate}}
+      </span>
+    </div>
+    <div>
+      Review:
+      <span class="review date" data-date="{{reviewDate}}">
+        {{reviewDate}}
+      </span>
+    </div>
     <article>
       <h1>{{title}}</h1>
       {{{contents}}}
